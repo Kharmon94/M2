@@ -18,6 +18,16 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'activeadmin'
 
+# Design
+gem 'materialize-sass'
+gem 'mini_racer'
+
+# Images
+gem 'mini_magick', '~> 4.8'
+gem 'aws-sdk-s3', require: false
+gem 'activestorage-validator'
+
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
