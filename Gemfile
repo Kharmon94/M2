@@ -27,6 +27,12 @@ gem 'mini_magick', '~> 4.8'
 gem 'aws-sdk-s3', require: false
 gem 'activestorage-validator'
 
+# shopping cart
+gem 'acts_as_shopping_cart'
+
+# stripe
+gem "stripe", '~> 4.7.0'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
