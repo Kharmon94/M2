@@ -1,3 +1,0 @@
-class Cart < ApplicationRecord
-	acts_as_shopping_cart_using :product
-end
