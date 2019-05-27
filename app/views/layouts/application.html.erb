@@ -16,8 +16,8 @@
           <nav id="nav" style="margin-bottom: 5%; background-color: white">
 
                 <div class="nav-wrapper">
-                  <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 50px; height: auto; margin:11%;' %></a>
-                  <a href="/" data="no-turbolink" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 60px; height: auto; margin:11%;' %></a>
+                  <a href="/" data="no-turbolink" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color: black">menu</i></a>
                   <ul class="right hide-on-med-and-down">
 
                           <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
@@ -33,7 +33,7 @@
                 </div>
           
 
-                <ul class="sidenav" id="mobile-demo">
+                <ul class="sidenav" id="mobile-demo" style="color: black">
                           <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
 
                           <li ><%=link_to 'News & Updates', posts_path, :style => "text-decoration: none; color: black;" %></li> 
