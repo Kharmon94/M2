@@ -7,9 +7,48 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
+        <header style="background-color: white; border: none;">
+
+          <nav id="nav" style="margin-bottom: 5%; background-color: white">
+
+                <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 50px; height: auto; margin:11%;' %></a>
+                  <a href="/" data="no-turbolink" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+
+                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'News & Updates', posts_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'Shop', products_path, :style => "text-decoration: none; color: black;" %></li>                          
+                          <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
+
+                  </ul>
+                </div>
+          
+
+                <ul class="sidenav" id="mobile-demo">
+                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'News & Updates', posts_path, :style => "text-decoration: none; color: black;" %></li> 
+
+                          <li ><%=link_to 'Shop', products_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
+                </ul>
+
+          </nav>
+
+     
+    </header>
     <%= yield %>
   </body>
 </html>
