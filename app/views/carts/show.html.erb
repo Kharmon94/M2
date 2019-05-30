@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<%= render(@cart.line_items) %>
+
+<div class="row">
+	<%= button_to "Empty Cart", @cart, method: :delete, data: { confirm: "Are You Sure?" }, class: "btn" %>
+</div>
+
+<div class="row">
+	<h3>Total: <%= number_to_currency(@cart.total_price) %></h3>
+</div>
+
+ |
+<%= link_to 'keep shopping', products_path, :class => "btn" %>
