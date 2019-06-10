@@ -24,7 +24,7 @@ class LineItemsController < InheritedResources::Base
 		@cart = Cart.find(session[:cart_id])
 		@line_item.destroy
 		respond_to do |format|
-			format.html { redirect_to products_path, notice: "Line item was successfully destroyed"}
+			format.html { redirect_to products_path, notice: "Item removed from cart."}
 			format.json { head :no_content }
 		end
 	end
