@@ -29,6 +29,21 @@ class LineItemsController < InheritedResources::Base
 		end
 	end
 
+	def update
+		@cart = Cart.find(session[:cart_id])
+
+	    respond_to do |format|
+	      if @line_item.update(line_item_params)
+	        format.html { redirect_to @line_item.cart, notice: 'Cart was successfully updated.' }
+	        format.json { render :show, status: :ok, location: @line_item.cart }
+	      else
+	        format.html { render :edit }
+	        format.json { render json: @cart.errors, status: :unprocessable_entity }
+	      end
+	    end
+	end
+
+
   private
 
   	def set_line_item
@@ -36,7 +51,7 @@ class LineItemsController < InheritedResources::Base
   	end
 
     def line_item_params
-      params.require(:line_item).permit(:product_id)
+      params.require(:line_item).permit(:product_id, :quantity)
     end
 end
 
