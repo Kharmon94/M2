@@ -27,8 +27,8 @@ gem 'mini_magick', '~> 4.8'
 gem 'aws-sdk-s3', require: false
 gem 'activestorage-validator'
 
-# shopping cart
-gem 'acts_as_shopping_cart'
+# # shopping cart
+# gem 'acts_as_shopping_cart'
 
 # stripe
 gem "stripe", '~> 4.7.0'
