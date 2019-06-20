@@ -33,6 +33,9 @@ gem 'activestorage-validator'
 # stripe
 gem "stripe", '~> 4.7.0'
 
+# keysstore
+gem "figaro"
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
