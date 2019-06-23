@@ -8,14 +8,17 @@ class LineItemsController < InheritedResources::Base
 
 	def create
 		product = Product.find(params[:product_id])
+		@order = current_order
 		@line_item = @cart.add_product(product)
+		@order.save
+    	session[:order_id] = @order.id
 		
 		respond_to do |format|
 			if @line_item.save
 				format.html { redirect_to @line_item.cart, notice: 'Item added to cart.'}
 				format.json { render :show, status: :created, location: @line_item }
 			else
-				format.html { render :new }
+				format.html { redirect_to products_path }
 				format.json { render json: @line_item.errors, status: :unprocessable_entity }
 			end
 		end
@@ -38,11 +41,11 @@ class LineItemsController < InheritedResources::Base
 	        format.html { redirect_to @line_item.cart, notice: 'Cart was successfully updated.' }
 	        format.json { render :show, status: :ok, location: @line_item.cart }
 	      else
-	        format.html { render :edit }
+	        format.html { redirect_to products_path }
 	        format.json { render json: @cart.errors, status: :unprocessable_entity }
 	      end
 	    end
-	end
+	end 
 
 
   private
@@ -52,7 +55,7 @@ class LineItemsController < InheritedResources::Base
   	end
 
     def line_item_params
-      params.require(:line_item).permit(:product_id, :quantity)
+      params.require(:line_item).permit(:product_id, :order_id, :quantity)
     end
 end
 
