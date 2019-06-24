@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BigFactsPodcast</title>
+    <title>MenToo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -25,12 +25,12 @@
 
                           <li ><%=link_to 'News & Updates', posts_path, :style => "text-decoration: none; color: black;" %></li>
 
-                          <li ><%=link_to 'Shop', products_path, :style => "text-decoration: none; color: black;" %></li>                          
+                          <li ><%=link_to 'Shop', spree_path, :style => "text-decoration: none; color: black;" %></li>                          
                           <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
 
                           <li ><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
 
-                          <li><%= render 'layouts/cart_text' %></li>
+                       <!--    <li><#%= render 'layouts/cart_text' %></li> -->
 
                   </ul>
                 </div>
@@ -41,7 +41,7 @@
 
                           <li ><%=link_to 'News & Updates', posts_path, :style => "text-decoration: none; color: black;" %></li> 
 
-                          <li ><%=link_to 'Shop', products_path, :style => "text-decoration: none; color: black;" %></li>
+                          <li ><%=link_to 'Shop', spree_path, :style => "text-decoration: none; color: black;" %></li>
 
                           <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
 
