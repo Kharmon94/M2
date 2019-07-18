@@ -89,14 +89,6 @@ ActiveRecord::Schema.define(version: 2019_06_24_083516) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "products", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "spree_addresses", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
